@@ -68,9 +68,11 @@ WORDS = ["BALE", "RONALDO", "MESSI", "HESKEY", "BENDTNER", "BENZEMA", "BECKHAM",
 
 guesses = 0
 MAX_WRONG = 7
+used_letters = []
+
 print("Welcome to Worddrop!")
 
-randomWord = random.choice(WORDS)
-current_word = randomWord = "_" * len(randomWord)
+random_word = random.choice(WORDS)
+current_word = random_word = "_" * len(random_word)
 
 print(current_word)
