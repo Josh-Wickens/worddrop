@@ -59,10 +59,18 @@ HANGMANPICS = ['''
 
 =========''']
 
-WORDS = ["BALE", "RONALDO", "MESSI", "HESKEY", "BENDTNER", "BENZEMA", "BECKHAM", "SOLSKJAER", "GERRARD", "LAMPARD", "AGUERO", "ZIDANE", "RONALDO", "NEYMAR", "ROONEY", "CHICHARITO", "SALAH", "MARADONA", "INIESTA", "HENRY", "CANTONA", "DROGBA", "LINEKER", "SILVA", "KOMPANY", "MARCELO", "VIDIC", "ERIKSON", "TERRY"]
+WORDS = ["BALE", "RONALDO", "MESSI", "HESKEY", "BENDTNER", "BENZEMA", "BECKHAM", "SOLSKJAER",
+"GERRARD", "LAMPARD", "AGUERO", "ZIDANE", "RONALDO", "NEYMAR", "ROONEY", 
+"CHICHARITO", "SALAH", 
+"MARADONA", "INIESTA", "HENRY", "CANTONA", "DROGBA", "LINEKER", "SILVA", 
+"KOMPANY", "MARCELO", 
+"VIDIC", "ERIKSON", "TERRY"]
 
-print("Welcome to Worddrop!\n")
+guesses = 0
+MAX_WRONG = 7
+print("Welcome to Worddrop!")
 
 randomWord = random.choice(WORDS)
+current_word = randomWord = "_" * len(randomWord)
 
-print(randomWord)
+print(current_word)
