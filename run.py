@@ -83,7 +83,7 @@ current_word = "_ " * len(random_word)
 
 print(current_word)
 
-while wrong_answers != 6 and current_word != random_word:
+while wrong_answers != 7 and current_word != random_word:
     print(HANGMANPICS[wrong_answers])
     print(f"You have used the following letter: {used_letters}")
 
@@ -108,8 +108,13 @@ while wrong_answers != 6 and current_word != random_word:
                 new_current_guess += letter_guess
             else:
                 new_current_guess += current_word[letter]
-
         current_word = new_current_guess
+        print(current_word)
+
+    else:
+        print("incorrect!")
+        wrong_answers += 1
+        print(current_word)
 
     # for letter in used_letters:
     #   if letter == letter_guess:
