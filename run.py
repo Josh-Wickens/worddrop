@@ -76,7 +76,6 @@ username = input("insert name: ")
 print(f"Welcome to Worddrop {username}!")
 print("\nGuess the footballers name by typing out a single letter in the console. \n")
 print("Too many wrong guesses and the man will hit the gallows! \n")
-print(HANGMANPICS[wrong_answers])
 print("Guess one letter at a time and see if you can save him \n")
 
 random_word = random.choice(WORDS)
@@ -93,10 +92,25 @@ while wrong_answers != 6 and current_word != random_word:
     print("\n You guessed:" + letter_guess)
 
     while letter_guess in used_letters:
-        print(f"you have already guessed this letter: {letter_guess}")
+        print(f"you have already guessed this letter: {letter_guess}\n")
+        print("Guess a different letter\n")
         letter_guess = input("\n guess a letter: ")
         letter_guess = letter_guess.upper()
         print("\n You guessed:" + letter_guess)
+
+    used_letters.append(letter_guess)
+
+    if letter_guess in current_word:
+        print("Correct!")
+        new_current_guess = ""
+        for letter in range(len(current_word)):
+            if letter_guess == current_word[letter]:
+                new_current_guess += letter_guess
+            else:
+                new_current_guess += current_word[letter]
+
+        current_word = new_current_guess
+
     # for letter in used_letters:
     #   if letter == letter_guess:
     #      print(
