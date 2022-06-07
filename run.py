@@ -93,7 +93,10 @@ while wrong_answers != 6 and current_word != random_word:
     print("\n You guessed:" + letter_guess)
 
     while letter_guess in used_letters:
-        print("you have already guessed this letterd")
+        print(f"you have already guessed this letter: {letter_guess}")
+        letter_guess = input("\n guess a letter: ")
+        letter_guess = letter_guess.upper()
+        print("\n You guessed:" + letter_guess)
     # for letter in used_letters:
     #   if letter == letter_guess:
     #      print(
